@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Libreria</title>
+	<link rel="stylesheet" type="text/css" href="css/libreria.css">
+</head>
+<body>
+<div class="container">
+	<header>
+		<h1 id="title">LIBRERIA</h1>
+	</header>
+	<section id='consulta'>
+		<h3>Lista de libros</h3>
+		<center>
+			<label>Buscar</label>
+			<input type="search" id="buscar">
+			<br><br>
+			<label>Libros a mostrar</label>
+			<select id="mostrar">
+				<option>5</option>
+				<option selected>10</option>
+				<option>20</option>
+				<option>30</option>
+			</select>
+		</center>
+		<br><br>
+		<table id='listalibros'></table>
+		<br>
+		<center><span id='paginas'></span></center>
+	</section>
+	
+	<section id='contenido'>
+		<form id="formulario"> 
+			<input type='hidden' name='id' id='id'>
+			<label>Título: </label>
+			<input type="text" id="titulo"/><br><br>
+			<label>Precio: </label>
+			<input type="number" id="precio" />
+			<br><br>
+			<input type="button" id="alta" value="Alta libro" />
+			<input type="button" id="modificacion" value="Modificación libro" />
+			<input type="button" id="baja" value="Baja libro" />
+			<br><br>
+			<span id="mensajes"></span>
+		</form>	
+	</section>
+</div>
+</body>
+</html>

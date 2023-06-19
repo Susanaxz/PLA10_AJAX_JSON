@@ -1,0 +1,21 @@
+	* {box-sizing: border-box; font-family: arial}
+	.container {width: 80%;margin:auto;}
+	header{text-align: center; color: white; text-shadow: 2px 2px 2px black; background: gray;height: 80px; margin-bottom: 15px}
+	header h1 {line-height: 80px;font-size: 4em; }
+	section#consulta{background: lightblue; border-radius: 15px; padding: 15px;display: inline-block; vertical-align: top;width: 50%}
+	
+	section#contenido{background: paleGreen; border-radius: 15px; padding: 30px;display: inline-block; vertical-align: top; width: 49%}
+	form {width: 90%; padding:20px; border:2px solid grey; margin:auto;}
+	label {width: 150px; display: inline-block;font-size: 1.2em}
+	input[type=text] {width: 340px;}
+	h3 {text-align: center; margin-top: 0px;}
+
+
+	table, td, th {border: 1px solid grey; margin:auto;}
+	td, th {padding: 5px; cursor:pointer;}
+	
+	td {cursor: pointer;}
+	#paginas a{color:blue; cursor:pointer; text-decoration: none}
+	.seleccionado {background-color: lightblue}
+	tr:hover {background-color: lightyellow;}
+	
