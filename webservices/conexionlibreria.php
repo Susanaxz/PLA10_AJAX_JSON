@@ -1,15 +1,18 @@
+
+
 <?php
+$host = 'localhost';
+$db   = 'libreria';
+$user = 'root';
+$pass = '';
+$charset = 'utf8mb4';
 
+$conexionLibreria = new mysqli($host, $user, $pass, $db);
 
-// Conectando, seleccionando la base de datos
-
-$conexionLibreria = mysqli_connect('localhost', 'root', '', 'libreria');
-
-// Verificar la conexion 
-if (mysqli_connect_errno()) {
-    echo "Error al conectar a la base de datos: " . mysqli_connect_error();
-    exit();
-
+if ($conexionLibreria->connect_error) {
+   die("Connection failed: " . $conexionLibreria->connect_error);
 }
+
+return new mysqli($host, $user, $pass, $db);
 
 ?>
