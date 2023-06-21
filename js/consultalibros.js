@@ -21,12 +21,10 @@ function consultarLibros() {
         let rows = "";
         for (let libro of libros.libros) {
             rows += `
-                <tr>
-                <td>${libro.idlibros}</td>
-                <td>${libro.titulo}</td>
-                <td>${libro.precio}</td>
-                <td><button onclick="bajaLibro(${libro.id})">Baja</button></td>
-                <td><button onclick="modificacionLibro(${libro.id})">Modificación</button></td>
+                <tr onclick='trasladarDatos(this)'>
+                        <td class='idlibro'>${libro.idlibros}</td>
+                        <td class='titulo'>${libro.titulo}</td>
+                        <td class='precio'>${libro.precio}</td>
                 </tr>
             `;
         }
@@ -38,4 +36,11 @@ function consultarLibros() {
 .catch((error) => {
     window.alert("Error al realizar la consulta: " + error);
 });
+}
+
+// función para trasladar los datos al formulario
+function trasladarDatos(tr) {
+    document.querySelector('#id').value = tr.querySelector('.idlibro').innerText;
+    document.querySelector('#titulo').value = tr.querySelector('.titulo').innerText;
+    document.querySelector('#precio').value = tr.querySelector('.precio').innerText;
 }
