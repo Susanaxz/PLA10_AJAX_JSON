@@ -1,21 +1,139 @@
-	* {box-sizing: border-box; font-family: arial}
-	.container {width: 80%;margin:auto;}
-	header{text-align: center; color: white; text-shadow: 2px 2px 2px black; background: gray;height: 80px; margin-bottom: 15px}
-	header h1 {line-height: 80px;font-size: 4em; }
-	section#consulta{background: lightblue; border-radius: 15px; padding: 15px;display: inline-block; vertical-align: top;width: 50%}
-	
-	section#contenido{background: paleGreen; border-radius: 15px; padding: 30px;display: inline-block; vertical-align: top; width: 49%}
-	form {width: 90%; padding:20px; border:2px solid grey; margin:auto;}
-	label {width: 150px; display: inline-block;font-size: 1.2em}
-	input[type=text] {width: 340px;}
-	h3 {text-align: center; margin-top: 0px;}
+* {
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+	/* Cambiado a una fuente más moderna. Recuerda incluir el link de Google Fonts en tu HTML */
+	margin: 0;
+	padding: 0;
+}
 
+body {
+	background-color: #f4f4f4;
+	/* Fondo de página de un color más suave */
+}
 
-	table, td, th {border: 1px solid grey; margin:auto;}
-	td, th {padding: 5px; cursor:pointer;}
+.container {
+	width: 80%;
+	margin: auto;
+	padding: 2em 0;
+	/* Espaciado superior e inferior para todo el contenido */
+}
+
+header {
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px 2px black;
+	background: #2c3e50;
+	/* Color más oscuro para el header */
+	height: 80px;
+	margin-bottom: 2em;
+	/* Mayor separación respecto al contenido */
+	border-radius: 5px;
+	/* Bordes redondeados */
+}
+
+header h1 {
+	line-height: 80px;
+	font-size: 3em;
+}
+
+section {
+	background: #ecf0f1;
+	/* Un color más neutro para las secciones */
+	border-radius: 15px;
+	padding: 2em;
+	/* Espaciado más consistente */
+	margin-bottom: 2em;
+	/* Separación entre secciones */
+}
+
+section#consulta {
+	width: 58%;
+	float: left;
+}
+
+section#contenido {
+	width: 40%;
+	float: right;
+}
+
+form {
+	border: none;
+}
+
+label {
+	display: inline-block;
+	font-size: 1em;
+	margin-bottom: .5em;
+}
+
+input[type=text] {
+	width: 100%;
+	padding: .5em;
+	border: 2px solid #bdc3c7;
+	border-radius: 7px;
+}
+
+h3 {
+	text-align: center;
+	padding: 1em 0;
+}
+
+table,
+td,
+th {
+	border: 1px solid rgb(95, 94, 94);
+	margin: auto;
+}
+
+td,
+th {
+	padding: .5em;
+	text-align: center;
+}
+
+td {
+	cursor: pointer;
+}
+
+#paginas a {
+	color: #064a77;
+	/* Color más oscuro para los links */
+}
+
+.seleccionado {
+	background-color: #bdc3c7;
+	/* Un color más neutro para los seleccionados */
+}
+
+tr:hover {
+	background-color: #bde1eb;
+	/* Un color más suave al pasar el mouse */
+}
+
+/* Limpiar floats después de las secciones */
+.container::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#alta,
+#modificacion,
+#baja {
+	width: 100%;
+	padding: 0.5em;
+	border: 1px solid #bdc3c7;
+	border-radius: 7px;
+	margin-top: 1em;
+	color: #052561;
+	cursor: pointer;
 	
-	td {cursor: pointer;}
-	#paginas a{color:blue; cursor:pointer; text-decoration: none}
-	.seleccionado {background-color: lightblue}
-	tr:hover {background-color: lightyellow;}
 	
+}
+
+#alta:hover,
+#modificacion:hover,
+#baja:hover {
+	background-color: #0d5f96;
+	color: white;
+}
