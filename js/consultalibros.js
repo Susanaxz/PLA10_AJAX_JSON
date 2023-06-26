@@ -1,6 +1,22 @@
 // hacer la consulta de libros con una petición AJAX
 function consultarLibros() {
-    fetch("webservices/consultalibros.php")
+    //Recoger los datos de la búsqueda
+    let buscar = document.querySelector("#buscar").value;
+    let mostrar = parseInt(document.querySelector("#mostrar").value);
+
+    let busqueda = {
+        buscar: buscar, 
+        mostrar: mostrar
+    };
+
+    //Realizar la petición AJAX al servidor para BUSCAR los libros
+    fetch("webservices/consultalibros.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(busqueda),
+    })
         .then((response) => {
         if (!response.ok) {
             throw new Error("HTTP error " + response.status);
