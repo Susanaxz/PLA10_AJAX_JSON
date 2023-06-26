@@ -7,3 +7,7 @@ document.querySelector('#modificacion').onclick = function () { modificacionLibr
 // cargar todos los libros con la función consultarLibros()
 
 consultarLibros();
+
+// añadir el evento change al campo de libros a mostrar
+document.querySelector("#mostrar").addEventListener("change", consultarLibros);
+
