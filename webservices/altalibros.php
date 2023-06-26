@@ -50,9 +50,21 @@ try {
         throw new Exception("Error: los datos del libro son inválidos o incompletos", 1);
     }
 } catch (Exception $e) {
+    $codigoError = strval($e->getCode());
+
+    $mensajeError = "";
+    switch ($codigoError) {
+        case '1062': // Código de error de MySQL para 'Entrada duplicada'
+            $mensajeError = "El título del libro ya existe. Por favor, introduce un título diferente.";
+            break;
+        default:
+            $mensajeError = $e->getMessage();
+            break;
+    }
+
     $respuesta = array(
-        "codigo" => strval($e->getCode()),
-        "error" => $e->getMessage()
+        "codigo" => $codigoError,
+        "error" => $mensajeError
     );
 }
 

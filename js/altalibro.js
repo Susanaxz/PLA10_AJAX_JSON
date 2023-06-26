@@ -35,7 +35,7 @@ function altaLibro() {
         // limpiar el formulario
         document.querySelector("#formulario").reset();
       } else {
-        throw mensaje.texto; // lanzar una excepción para que se ejecute el catch
+        throw mensaje.error; // lanzar una excepción para que se ejecute el catch
       }
     })
     .catch((error) => {
